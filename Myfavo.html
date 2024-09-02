@@ -1,0 +1,233 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" >
+    <title>伊利討論區 - 休閒聊天</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+    <style>
+
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        .warning {
+            background-color: #ffffd9;
+            border: 1px solid #e6db55;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        #posts_button{
+            margin-right: 100px;
+        }
+        .pagination {
+            margin-top: 10px;
+            margin-bottom: 15px;
+            text-align: right;
+        }
+        .pagination a {
+            padding: 5px 10px;
+            margin: 0 2px;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            color: #333;
+        }
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .sticky {
+            background-color: #ffe6e6;
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+        .up {
+            background-color: #ff9999;
+        }
+        .down {
+            background-color: #99ff99;
+        }
+    </style>
+<body>
+<div id="page">
+    <div class="header">
+        <a href="Home.html" class="thread-title-link">
+            <img src="image/eyny icon.png" width="150" height="80">
+        </a>
+        <div class="logo">伊利討論區</div>
+        <div class="user-info">
+            <span class="user-profile">
+                <a href="profile.html" class="thread-title-link">
+                <span><img src="image/user.png" width="20" height="20">Mr.Chan</span>            
+                </a>
+                <a href="Myfavo.html" class="thread-title-link">
+                    <span>我的最愛</span>
+                </a>
+            </span>
+
+
+                <span><img src="image/setting.png" width="20" height="20">設定</span>
+
+            <span>登出</span>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="nav-links">
+            <a href="#">論壇</a>
+            <a href="#">專屬會員</a>
+            <a href="#">自助升級</a>
+            <a href="#">廣告</a>
+            <a href="#">排行</a>
+            <a href="#">新片</a>
+            <a href="#">空間</a>
+            <a href="#">群組</a>
+        </div>
+    </div>
+
+    <div class="search-container">
+        <div class="search-bar">
+            <img src="image/search.png" width="20px" height="20px">
+            <input type="text" placeholder="貼子">
+            <button type="submit">搜索</button>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="sub-nav" id="subNav">
+            <div class="highlight" id="highlight"></div>
+            <a href="#" data-index="0">休閒聊天</a>
+            <a href="#" data-index="1">感情感性</a>
+            <a href="#" data-index="2">體育運動</a>
+            <a href="#" data-index="3">飲食交流</a>
+            <a href="#" data-index="4">潮流資訊</a>
+            <a href="#" data-index="5">影視娛樂</a>
+            <a href="#" data-index="6">熱門線上</a>
+            <a href="#" data-index="7">上班一族</a>
+        </div>
+
+        <div class="container">
+            <h1>我的最愛 <span style="font-size: 0.8em; color: #666;"></span></h1>
+            
+            <table id="myFavoTable">
+                <tr>
+                    <th></th>
+                    <th>主題</th>
+                    <th>作者</th>
+                    <th>回覆/查看</th>
+                    <th>最後發表</th>
+                    <th>最愛</th>
+                </tr>
+                <tr>
+                    <td class="thread-icon"><img src="image/icon.png" alt="Icon"></td>
+                    <td><a href="friend.html">大家安安～新人來報到嘍！</a></td>
+                    <td>夜影</td>
+                    <td>1 / 31801</td>
+                    <td>2011-1-1 00:40</td>
+                    <td>
+                        <span class="star" onclick="toggleFavorite(this)" data-post-id="POST_ID_HERE" style="cursor: pointer; color: gold; font-size: 24px; user-select: none;">★</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="thread-icon"><img src="image/icon.png" alt="Icon"></td>
+                    <td>找隨意聊天的朋友</td>
+                    <td>mircales</td>
+                    <td>6 / 4456</td>
+                    <td>2024-1-26 13:46</td>
+                    <td>
+                        <span class="star" onclick="toggleFavorite(this)" data-post-id="POST_ID_HERE" style="cursor: pointer; color: gold; font-size: 24px; user-select: none;">★</span>
+                    </td>
+                </tr>
+            </table>
+
+
+        </div>
+
+    </div>
+
+        <div class="footer">
+            <span>Powered by Discuz!</span>
+            <span>© Comsenz Inc.</span>
+            <div>
+                <a href="#">Archiver</a>
+                <a href="#">手機版</a>
+                <a href="#">廣告</a>
+                <a href="#">聯絡我們</a>
+                <a href="#">廣告查詢</a>
+                <a href="#">廠商合作</a>
+                <a href="#">伊莉</a>
+            </div>
+            <div class="timestamp">
+                GMT+8, 2024-8-29 12:21 AM
+            </div>
+        </div>
+        <div class="disclaimer">
+            <p>重要聲明：本討論區是以即時上載留言的方式運作，對所有留言的真實性、完整性及立場等，不負任何法律責任。而一切留言之言論只代表留言者個人意見，並非本網站之立場，用戶不應信賴內容，並應自行判斷內容之真實性。於有關情形下，用戶應尋求專業意見(如涉及醫療、法律或投資等問題)。由於本討論區受到「即時留言」運作方式所規限，故不能完全監察所有留言，若讀者發現有留言出現問題，請聯絡我們。有權删除任何留言及拒絕任何人士留言，同時亦有不刪除留言的權利。切勿撰寫粗言穢語、誹謗、渲染色情暴力或人身攻擊的言論，敬請自律。本網站保留一切法律權利。</p>
+        </div>
+</div>
+    <div id="backToTop">Back<br>To Top</div>
+    
+
+<script>
+    // Get the button
+    const backToTopButton = document.getElementById("backToTop");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    }
+
+    // Smooth scroll to top function
+    function scrollToTop(duration) {
+        // Cancel if already at top
+        if (document.scrollingElement.scrollTop === 0) return;
+
+        const totalScrollDistance = document.scrollingElement.scrollTop;
+        let scrollY = totalScrollDistance, oldTimestamp = null;
+
+        function step(newTimestamp) {
+            if (oldTimestamp !== null) {
+                // if duration is 0 scrollY will be -Infinity
+                scrollY -= totalScrollDistance * (newTimestamp - oldTimestamp) / duration;
+                if (scrollY <= 0) return document.scrollingElement.scrollTop = 0;
+                document.scrollingElement.scrollTop = scrollY;
+            }
+            oldTimestamp = newTimestamp;
+            window.requestAnimationFrame(step);
+        }
+        window.requestAnimationFrame(step);
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    backToTopButton.onclick = function() {
+        scrollToTop(200); // 500ms duration for the scrolling animation
+    }
+
+
+
+</script>
+</body>
+</html>

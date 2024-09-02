@@ -1,0 +1,453 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" >
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+    <style>
+
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        .warning {
+            background-color: #ffffd9;
+            border: 1px solid #e6db55;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        #posts_button{
+            position: absolute;
+            left: 150px;
+        }
+        .pagination {
+            margin-top: 10px;
+            margin-bottom: 15px;
+            text-align: right;
+        }
+        .pagination a {
+            padding: 5px 10px;
+            margin: 0 2px;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            color: #333;
+        }
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .sticky {
+            background-color: #ffe6e6;
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+        .up {
+            background-color: #ff9999;
+        }
+        .down {
+            background-color: #99ff99;
+        }
+    </style>
+<body>
+<div id="page">
+    <div class="header">
+        <a href="Home.html">
+            <img src="image/eyny icon.png" width="150" height="80">
+        </a>
+        <div class="logo">伊利討論區</div>
+        <div class="user-info">
+            <span class="user-profile">
+                <a href="profile.html" class="thread-title-link">
+                    <span><img src="image/user.png" width="20" height="20">Mr.Chan</span>            
+                    </a>
+                <a href="Myfavo.html" class="thread-title-link">
+                    <span>我的最愛</span>
+                </a>
+            </span>
+
+                <span><img src="image/setting.png" width="20" height="20">設定</span>
+            <span>登出</span>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="nav-links">
+            <a href="#">論壇</a>
+            <a href="#">專屬會員</a>
+            <a href="#">自助升級</a>
+            <a href="#">廣告</a>
+            <a href="#">排行</a>
+            <a href="#">新片</a>
+            <a href="#">空間</a>
+            <a href="#">群組</a>
+        </div>
+    </div>
+
+    <div class="search-container">
+        <div class="search-bar">
+            <img src="image/search.png" width="20px" height="20px">
+            <input type="text" placeholder="貼子">
+            <button type="submit">搜索</button>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="sub-nav" id="subNav">
+            <div class="highlight" id="highlight"></div>
+            <a href="#" data-index="0">休閒聊天</a>
+            <a href="#" data-index="1">感情感性</a>
+            <a href="#" data-index="2">體育運動</a>
+            <a href="#" data-index="3">飲食交流</a>
+            <a href="#" data-index="4">潮流資訊</a>
+            <a href="#" data-index="5">影視娛樂</a>
+            <a href="#" data-index="6">熱門線上</a>
+            <a href="#" data-index="7">上班一族</a>
+        </div>
+
+        <div class="container">
+            <div class="breadcrumb"><img src="image/home.png" width="20px" height="20px"> / 
+                <a href="Home.html">論壇</a> / 
+                <a href="#">休閒聊天</a>
+
+            </div>
+
+            <h1>休閒聊天<span style="font-size: 0.8em; color: #666;">主題: 8454</span></h1>
+            
+            <div class="warning">
+                <p>【在本版發言、鬧事已開始半版規停權，所有違規事項一經查證即依規處置】</p>
+                <p>* 發帖禁止使用「選作看可見」模式，建議直接用「打分」+「附件處理」*</p>
+                <p>【為維護自身權益，發言及恶意舉報明辨明理】</p>
+            </div>
+
+            <table class="thread-list">
+                <tr>
+                    <th></th>
+                    <th>主題</th>
+                    <th>作者</th>
+                    <th>回覆/查看</th>
+                    <th>最後發表</th>
+                </tr>
+                <tr>
+                    <td class="thread-icon"><img src="image/icon.png" alt="Icon"></td>
+                    <td>
+                        <div class="thread-title">一個屬於你我「聊快又舒適的聊天空間」~你想聊什麼~</div>
+                        <div class="thread-info">
+                            PS: 本版基本禁止討論直播之相關話題，避免造成困擾成員分類城市: 歷史回憶區...................................................................................................................................................................................................<br>
+                            版主: cflee2000, 摩雷克斯
+                        </div>
+                    </td>
+                    <td class="thread-stats">
+                        <br>
+                        <a href="#">該同3:2法則嗎?</a><br>
+                    </td>
+                    <td>288436 / 26014959</td>
+                    <td>21 秒前 yk.zon</td>
+                </tr>
+                <tr>
+                    <td class="thread-icon"><img src="image/icon.png" alt="Icon"></td>
+                    <td>
+                        <a href="posts.html"><div class="thread-title">網友交友區</div></a>
+                        <div class="thread-info">智慧可以在這裡認識朋友和交心。</div>
+                    </td>
+                    <td class="thread-stats">
+                        <div class="stats">8454 / 750735</div>
+                        <div class="latest-post">
+                            <a href="#">感覺就很奇怪。。。。。。-超不喜歡...</a><br>
+                            昨天 10:25 PM blueteam9
+                        </div>
+                    </td>
+                    <td>8454 / 750735</td>
+                    <td>昨天 10:25 PM blueteam9</td>
+                </tr>
+                <tr>
+                    <td class="thread-icon"><img src="image/icon.png" alt="Icon"></td>
+                    <td>
+                        <div class="thread-title">靈異鬼故事</div>
+                        <div class="thread-info">
+                            這裡可以分享一切靈異故事，鬼戲或(18禁)恐怖國片。<br>
+                            子版塊: UFO及超自然力量 血腥噁心區<br>
+                            版主: long540915
+                        </div>
+                    </td>
+                    <td class="thread-stats">
+                        <div class="stats">32432 / 1888446</div>
+                        <div class="latest-post">
+                            <a href="#">= = = = = = =版主選華燈...</a><br>
+                            昨天 09:21 PM miracles
+                        </div>
+                    </td>
+                    <td>32432 / 1888446</td>
+                    <td>昨天 09:21 PM miracles</td>
+                </tr>
+                <tr>
+                    <td class="thread-icon"><img src="image/icon.png" alt="Icon"></td>
+                    <td>
+                        <div class="thread-title">生活百科及知識</div>
+                        <div class="thread-info">
+                            生活上任何事情和學習都可以在這裡分享和討論。<br>
+                            版主: kirito81317
+                        </div>
+                    </td>
+                    <td class="thread-stats">
+                        <div class="stats">69746 / 6924462</div>
+                        <div class="latest-post">
+                            <a href="#">(生活百科) 中午維修教有更鑽...</a><br>
+                            昨天 08:37 PM b16481
+                        </div>
+                    </td>
+                    <td>69746 / 6924462</td>
+                    <td>昨天 08:37 PM b16481</td>
+                </tr>
+                <tr>
+                    <td class="thread-icon"><img src="image/icon.png" alt="Icon"></td>
+                    <td>
+                        <div class="thread-title">IQ題練習題</div>
+                        <div class="thread-info">
+                            IQ提升 思考訓練<br>
+                            版主: sxxics
+                        </div>
+                    </td>
+                    <td class="thread-stats">
+                        <div class="stats">16002 / 1014480</div>
+                        <div class="latest-post">
+                            <a href="#">一桿進出是否級 十秒毒出色管...</a><br>
+                            昨天 11:19 PM 万锦
+                        </div>
+                    </td>
+                    <td>16002 / 1014480</td>
+                    <td>昨天 11:19 PM 万锦</td>
+                </tr>
+                <tr>
+                    <td class="thread-icon"><img src="image/icon.png" alt="Icon"></td>
+                    <td>
+                        <div class="thread-title">電腦家電話題</div>
+                        <div class="thread-info">
+                            電腦&手機常識，想有嫻熟的家話可以加入小品嘗！與大家一起分享吧！<br>
+                            子版塊: 使劇設置問題<br>
+                            版主: bv0ge, n840505, 陳雷克斯
+                        </div>
+                    </td>
+                    <td class="thread-stats">
+                        <div class="stats">181678 / 3500109</div>
+                        <div class="latest-post">
+                            <a href="#">我跪</a><br>
+                            昨天 10:15 PM fire741105
+                        </div>
+                    </td>
+                    <td>181678 / 3500109</td>
+                    <td>昨天 10:15 PM fire741105</td>
+                </tr>
+                <tr>
+                    <td class="thread-icon"><img src="image/icon.png" alt="Icon"></td>
+                    <td>
+                        <div class="thread-title">性教育專區</div>
+                        <div class="thread-info">
+                            關於青少年少女想到的青春煩惱、及性教育相關的疑問，可來此詢問。
+                        </div>
+                    </td>
+                    <td class="thread-stats">
+                        <div class="stats">18141 / 16777215</div>
+                        <div class="latest-post">
+                            <a href="#">= = = = = = =版版主出...</a><br>
+                            昨天 07:59 PM miracles
+                        </div>
+                    </td>
+                    <td>18141 / 16777215</td>
+                    <td>昨天 07:59 PM miracles</td>
+                </tr>
+                <tr>
+                    <td class="thread-icon"><img src="image/icon.png" alt="Icon"></td>
+                    <td>
+                        <div class="thread-title">希臘神話</div>
+                        <div class="thread-info">
+                            【布袋戲】相關文章討論討論<br>
+                            子版塊: 希臘真相版 希臘真實版 希臘文學創作區&免責聲明<br>
+                            版主: 控控@辛苦
+                        </div>
+                    </td>
+                    <td class="thread-stats">
+                        <div class="stats">14976 / 791133</div>
+                        <div class="latest-post">
+                            <a href="#">被懂光</a><br>
+                            昨天 09:22 PM gn01269442
+                        </div>
+                    </td>
+                    <td>14976 / 791133</td>
+                    <td>昨天 09:22 PM gn01269442</td>
+                </tr>
+                <tr>
+                    <td class="thread-icon"><img src="image/icon.png" alt="Icon"></td>
+                    <td>
+                        <div class="thread-title">知識問與答</div>
+                        <div class="thread-info">
+                            版主: 森雷克斯, wy4959
+                        </div>
+                    </td>
+                    <td class="thread-stats">
+                        <div class="stats">48516 / 16777215</div>
+                        <div class="latest-post">
+                            <a href="#">版主選華燈《感謝請廣頭研商...</a><br>
+                            昨天 01:20 PM ハルジタ
+                        </div>
+                    </td>
+                    <td>48516 / 16777215</td>
+                    <td>昨天 01:20 PM ハルジタ</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+        <div class="footer">
+            <span>Powered by Discuz!</span>
+            <span>© Comsenz Inc.</span>
+            <div>
+                <a href="#">Archiver</a>
+                <a href="#">手機版</a>
+                <a href="#">廣告</a>
+                <a href="#">聯絡我們</a>
+                <a href="#">廣告查詢</a>
+                <a href="#">廠商合作</a>
+                <a href="#">伊莉</a>
+            </div>
+            <div class="timestamp">
+                GMT+8, 2024-8-29 12:21 AM
+            </div>
+        </div>
+        <div class="disclaimer">
+            <p>重要聲明：本討論區是以即時上載留言的方式運作，對所有留言的真實性、完整性及立場等，不負任何法律責任。而一切留言之言論只代表留言者個人意見，並非本網站之立場，用戶不應信賴內容，並應自行判斷內容之真實性。於有關情形下，用戶應尋求專業意見(如涉及醫療、法律或投資等問題)。由於本討論區受到「即時留言」運作方式所規限，故不能完全監察所有留言，若讀者發現有留言出現問題，請聯絡我們。有權删除任何留言及拒絕任何人士留言，同時亦有不刪除留言的權利。切勿撰寫粗言穢語、誹謗、渲染色情暴力或人身攻擊的言論，敬請自律。本網站保留一切法律權利。</p>
+        </div>
+</div>
+    <div id="backToTop">Back<br>To Top</div>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const subNav = document.getElementById('subNav');
+        const highlight = document.getElementById('highlight');
+        const links = subNav.getElementsByTagName('a');
+
+        function updateHighlight(event) {
+            const clickedLink = event.target;
+            const linkRect = clickedLink.getBoundingClientRect();
+            const navRect = subNav.getBoundingClientRect();
+
+            highlight.style.width = `${linkRect.width}px`;
+            highlight.style.left = `${linkRect.left - navRect.left}px`;
+        }
+
+        // Set initial highlight position
+        updateHighlight({ target: links[0] });
+
+        // Add click event listeners to all links
+        for (let link of links) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                updateHighlight(event);
+            });
+        }
+    });
+</script>
+<script>
+    const subNav = document.getElementById('subNav');
+    const highlight = document.getElementById('highlight');
+    const links = subNav.getElementsByTagName('a');
+    const threadLists = document.getElementsByClassName('thread-list');
+
+    function setActiveTab(index) {
+        // Update highlight position
+        const activeLink = links[index];
+        highlight.style.width = `${activeLink.offsetWidth}px`;
+        highlight.style.left = `${activeLink.offsetLeft}px`;
+
+        // Show active thread list and hide others
+        for (let i = 0; i < threadLists.length; i++) {
+            if (i === index) {
+                threadLists[i].classList.add('active');
+            } else {
+                threadLists[i].classList.remove('active');
+            }
+        }
+    }
+
+    // Add click event listeners to navigation links
+    for (let i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function(e) {
+            e.preventDefault();
+            setActiveTab(i);
+        });
+    }
+
+    // Set initial active tab
+    setActiveTab(0);
+</script>
+<script>
+    // Get the button
+    var backToTopButton = document.getElementById("backToTop");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    }
+
+    // Smooth scroll to top function
+    function scrollToTop(duration) {
+        // Cancel if already at top
+        if (document.scrollingElement.scrollTop === 0) return;
+
+        const totalScrollDistance = document.scrollingElement.scrollTop;
+        let scrollY = totalScrollDistance, oldTimestamp = null;
+
+        function step(newTimestamp) {
+            if (oldTimestamp !== null) {
+                // if duration is 0 scrollY will be -Infinity
+                scrollY -= totalScrollDistance * (newTimestamp - oldTimestamp) / duration;
+                if (scrollY <= 0) return document.scrollingElement.scrollTop = 0;
+                document.scrollingElement.scrollTop = scrollY;
+            }
+            oldTimestamp = newTimestamp;
+            window.requestAnimationFrame(step);
+        }
+        window.requestAnimationFrame(step);
+    }
+
+    function toggleFavorite(element) {
+    if (element.textContent === '☆') {
+        element.textContent = '★';
+        element.style.color = 'gold';
+
+        // Add to MyFavo list logic here
+    } else {
+        element.textContent = '☆';
+        element.style.color = 'black';
+        // Remove from MyFavo list logic here
+    }
+}
+
+
+
+</script>
+</body>
+</html>
